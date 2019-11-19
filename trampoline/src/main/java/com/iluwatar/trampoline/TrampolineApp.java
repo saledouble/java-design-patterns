@@ -23,6 +23,9 @@
 
 package com.iluwatar.trampoline;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -39,7 +42,8 @@ public class TrampolineApp {
    * Main program for showing pattern. It does loop with factorial function.
    */
   public static void main(String[] args) {
-    log.info("start pattern");
+	Logger log = LoggerFactory.getLogger("");
+	log.info("start pattern");
     var result = loop(10, 1).result();
     log.info("result {}", result);
 
